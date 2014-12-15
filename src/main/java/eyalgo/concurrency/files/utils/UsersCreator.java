@@ -26,8 +26,8 @@ public class UsersCreator {
 	public static void main(String[] args) throws IOException {
 		String path = "src//main//resources//files";
 
-		int numberOfFiles = 200;
-		int maxNumberOfUserInFile = 1000;
+		int numberOfFiles = 1000;
+		int maxNumberOfUserInFile = 10000;
 		for (int i = 0; i < numberOfFiles; i++) {
 			Random random = new Random(System.currentTimeMillis());
 
@@ -43,7 +43,7 @@ public class UsersCreator {
 	private static Collection<User> createRandomUsers(int numberOfUsers) {
 		Collection<User> users = new ArrayList<>();
 		for (int i = 0; i < numberOfUsers; i++) {
-			users.add(new User(RandomStringUtils.randomAlphabetic(4), RandomStringUtils.randomAlphabetic(8)));
+			users.add(new User(RandomStringUtils.randomAlphabetic(6), RandomStringUtils.randomAlphabetic(16)));
 		}
 		return users;
 	}
